@@ -71,13 +71,13 @@ export const PORTFOLIO_DATA = {
                 title: 'Fonephoto',
                 year: '2026',
                 description: 'Shot on Phone.',
-                coverImage: '/portfolio/photograph/Fonephoto/1.png',
+                coverImage: '/portfolio/photograph/Fonephoto/1.webp',
                 tags: ['Mobile', 'Life'],
                 photos: [
-                    { src: '/portfolio/photograph/Fonephoto/1.png', alt: 'Photo 1' },
-                    { src: '/portfolio/photograph/Fonephoto/2.png', alt: 'Photo 2' },
-                    { src: '/portfolio/photograph/Fonephoto/3.png', alt: 'Photo 3' },
-                    { src: '/portfolio/photograph/Fonephoto/4.jpg', alt: 'Photo 4' }
+                    { src: '/portfolio/photograph/Fonephoto/1.webp', alt: 'Photo 1' },
+                    { src: '/portfolio/photograph/Fonephoto/2.webp', alt: 'Photo 2' },
+                    { src: '/portfolio/photograph/Fonephoto/3.webp', alt: 'Photo 3' },
+                    { src: '/portfolio/photograph/Fonephoto/4.webp', alt: 'Photo 4' }
                 ]
             },
             {
@@ -85,14 +85,14 @@ export const PORTFOLIO_DATA = {
                 title: 'NTMK High School',
                 year: '2026',
                 description: 'Memories from school.',
-                coverImage: '/portfolio/photograph/NTMK High School/5.png',
+                coverImage: '/portfolio/photograph/NTMK High School/5.webp',
                 tags: ['School', 'Memories'],
                 photos: [
-                    { src: '/portfolio/photograph/NTMK High School/5.png', alt: 'Photo 5' },
-                    { src: '/portfolio/photograph/NTMK High School/6.png', alt: 'Photo 6' },
-                    { src: '/portfolio/photograph/NTMK High School/7.png', alt: 'Photo 7' },
-                    { src: '/portfolio/photograph/NTMK High School/8.png', alt: 'Photo 8' },
-                    { src: '/portfolio/photograph/NTMK High School/9.png', alt: 'Photo 9' }
+                    { src: '/portfolio/photograph/NTMK High School/5.webp', alt: 'Photo 5' },
+                    { src: '/portfolio/photograph/NTMK High School/6.webp', alt: 'Photo 6' },
+                    { src: '/portfolio/photograph/NTMK High School/7.webp', alt: 'Photo 7' },
+                    { src: '/portfolio/photograph/NTMK High School/8.webp', alt: 'Photo 8' },
+                    { src: '/portfolio/photograph/NTMK High School/9.webp', alt: 'Photo 9' }
                 ]
             }
         ],
