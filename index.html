@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trung Hiếu (Byou) - everything(er)">
+    <title>Trung Hiếu (Byou) | Personal Profile</title>
+    <link rel="icon" type="image/png" href="/avatar.png">
+    <meta name="theme-color" content="#F3D7C2">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Trung Hiếu (Byou) - everything(er)">
+    <meta property="og:description" content="everything(er), still trying to be bett(er). Portfolio & Journal.">
+    <meta property="og:image" content="/avatar.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+
+
+    <!-- Markdown Parser -->
+
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <button class="nav-btn active" data-target="home" aria-label="Home">
+                <i data-lucide="user"></i>
+                <span>Home</span>
+            </button>
+            <button class="nav-btn" data-target="portfolio" aria-label="Portfolio">
+                <i data-lucide="briefcase"></i>
+                <span>Portfolio</span>
+            </button>
+            <button class="nav-btn" data-target="journal" aria-label="Journal">
+                <i data-lucide="book-open"></i>
+                <span>Journal</span>
+            </button>
+            <button class="nav-btn" data-target="contact" aria-label="Contact">
+                <i data-lucide="mail"></i>
+                <span>Contact</span>
+            </button>
+        </nav>
+
+        <main id="main-content">
+            <!-- HOME SECTION -->
+            <section id="home" class="page-section active">
+                <div class="profile-header">
+                    <div class="avatar-container">
+                        <!-- Placeholder for user uploaded image or default -->
+                        <img src="/avatar.png" alt="Trung Hiếu (Byou)" class="avatar" id="profile-avatar">
+                    </div>
+                    <h1 class="profile-name">Trung Hiếu (Byou)</h1>
+                    <p class="profile-bio">
+                        everything(er), still trying to be bett(er).
+                    </p>
+
+                    <!-- Quote from Config -->
+                    <div id="quote-container" class="quote-container">
+                        <!-- Injected via JS -->
+                    </div>
+
+                    <div class="profile-meta">
+                        <div class="meta-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>HCMC, Vietnam</span>
+                        </div>
+                        <div class="meta-item">
+                            <i data-lucide="mail"></i>
+                            <a href="mailto:trunghieuxlsh@gmail.com">trunghieuxlsh@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://www.behance.net/byouku" class="social-btn" aria-label="Behance"
+                            target="_blank"><i data-lucide="palette"></i></a>
+                        <a href="https://www.youtube.com/@trunghiuu" class="social-btn" aria-label="YouTube"
+                            target="_blank"><i data-lucide="youtube"></i></a>
+                        <a href="https://www.facebook.com/tuilaby/" class="social-btn" aria-label="Facebook"
+                            target="_blank"><i data-lucide="facebook"></i></a>
+                        <a href="https://www.instagram.com/trnghieu.21/" class="social-btn" aria-label="Instagram"
+                            target="_blank"><i data-lucide="instagram"></i></a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- PORTFOLIO SECTION -->
+            <section id="portfolio" class="page-section">
+                <!-- Categories View -->
+                <div id="portfolio-categories-view">
+                    <div class="section-header">
+                        <h2>Portfolio</h2>
+                        <p>A collection of my creative work.</p>
+                    </div>
+
+                    <div class="card-grid" id="portfolio-categories-container">
+                        <!-- Categories injected via JS -->
+                    </div>
+                </div>
+
+                <!-- Detail View (Hidden by default) -->
+                <div id="portfolio-detail-view" class="hidden">
+                    <button class="back-btn" id="back-to-portfolio">
+                        <i data-lucide="arrow-left"></i> Back to Categories
+                    </button>
+                    <div class="section-header">
+                        <h2 id="portfolio-category-title">Category Info</h2>
+                        <p id="portfolio-category-desc"></p>
+                    </div>
+                    <div class="card-grid" id="portfolio-items-container">
+                        <!-- Items injected here -->
+                    </div>
+                </div>
+            </section>
+
+            <!-- JOURNAL SECTION -->
+            <section id="journal" class="page-section">
+                <!-- Journal List -->
+                <div id="journal-list-view">
+                    <div class="section-header">
+                        <h2>Journal</h2>
+                        <p>Thoughts, updates, and stories.</p>
+                    </div>
+
+                    <div class="journal-controls">
+                        <div class="search-box">
+                            <i data-lucide="search"></i>
+                            <input type="text" id="journal-search" placeholder="Search posts...">
+                        </div>
+                        <div class="tags-filter" id="tags-filter">
+                            <!-- Tags injected via JS -->
+                        </div>
+                    </div>
+
+                    <div class="journal-grid" id="journal-posts-container">
+                        <!-- Posts injected via JS -->
+                        <div class="loading-state">Loading posts...</div>
+                    </div>
+                </div>
+
+                <!-- Journal Detail -->
+                <div id="journal-detail-view" class="hidden">
+                    <button class="back-btn" id="back-to-journal">
+                        <i data-lucide="arrow-left"></i> Back to list
+                    </button>
+                    <article id="journal-content" class="markdown-body">
+                        <!-- Markdown content injected here -->
+                    </article>
+                </div>
+            </section>
+
+            <!-- CONTACT SECTION -->
+            <section id="contact" class="page-section">
+                <div class="section-header">
+                    <h2>Contact</h2>
+                    <p>Get in touch or just say hi.</p>
+                </div>
+
+                <div class="contact-container">
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent!');">
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="you@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="5" placeholder="Hello! I would like to..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            Send Message <i data-lucide="send"></i>
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+
+        </main>
+
+        <footer class="main-footer">
+            <p>&copy; 2026 Trung Hiếu (Byou). All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Background Music -->
+    <audio id="bgm-audio" loop preload="auto">
+        <source src="/music.m4a" type="audio/mp4">
+    </audio>
+
+    <div class="bgm-controls">
+        <button id="bgm-toggle" class="bgm-btn" aria-label="Toggle Music">
+            <i data-lucide="music" id="bgm-icon"></i>
+        </button>
+    </div>
+
+    <!-- Album Modal -->
+    <div id="album-modal" class="modal-overlay hidden">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <div class="modal-content glass-panel">
+            <div class="album-header">
+                <h2 id="album-title">Album Title</h2>
+                <p id="album-desc">Description</p>
+            </div>
+            <div class="photo-grid" id="album-grid">
+                <!-- Photos injected here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="modal-overlay lightbox hidden">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <button id="lb-prev" class="lb-nav-btn" aria-label="Previous"><i data-lucide="chevron-left"></i></button>
+        <img id="lightbox-img" src="" alt="Full view">
+        <button id="lb-next" class="lb-nav-btn" aria-label="Next"><i data-lucide="chevron-right"></i></button>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+</body>
+
+</html>

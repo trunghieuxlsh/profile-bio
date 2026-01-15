@@ -1,0 +1,16 @@
+[
+  {
+    "slug": "welcome-to-my-bio",
+    "title": "Welcome to my Bio",
+    "date": "2023-10-27",
+    "tags": ["personal", "update"],
+    "excerpt": "A short intro to who I am and what I do."
+  },
+  {
+    "slug": "my-video-gear-2024",
+    "title": "My Video Gear 2024",
+    "date": "2024-01-15",
+    "tags": ["gear", "video"],
+    "excerpt": "A breakdown of the camera and lenses I use for my daily work."
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "name": "glowing-kepler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "lucide": "^0.562.0",
+    "marked": "^17.0.1",
+    "vite": "^7.3.1"
+  }
+}
