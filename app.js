@@ -481,3 +481,60 @@ document.addEventListener('keydown', (e) => {
 });
 
 
+
+// --- Cursor Glow System ---
+function initCursorGlow() {
+    // 1. Accessibility & Device Checks
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isTouchDevice = window.matchMedia('(pointer: coarse)').matches;
+
+    if (prefersReducedMotion || isTouchDevice) return;
+
+    // 2. Create and inject glow element
+    const glow = document.createElement('div');
+    glow.id = 'cursor-glow';
+    glow.className = 'cursor-glow';
+    document.body.appendChild(glow);
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let isVisible = false;
+    let ticking = false;
+
+    // 3. Pointer Move Listener
+    window.addEventListener('pointermove', (e) => {
+        // Ensure it's a mouse (pointerType 'mouse' or 'pen', not 'touch')
+        if (e.pointerType === 'touch') return;
+
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        // On first move, reveal the glow
+        if (!isVisible) {
+            glow.style.opacity = '0.9'; // matches CSS target
+            isVisible = true;
+        }
+
+        if (!ticking) {
+            window.requestAnimationFrame(() => {
+                // margin-left/top in CSS handles centering (-190px)
+                glow.style.transform = `translate3d(${mouseX}px, ${mouseY}px, 0)`;
+                ticking = false;
+            });
+            ticking = true;
+        }
+    });
+
+    // 4. Handle leaving the window
+    document.documentElement.addEventListener('mouseleave', () => {
+        glow.style.opacity = '0';
+        isVisible = false;
+    });
+
+    document.documentElement.addEventListener('mouseenter', () => {
+        glow.style.opacity = '0.9';
+        isVisible = true;
+    });
+}
+
+initCursorGlow();

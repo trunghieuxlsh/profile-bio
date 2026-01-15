@@ -51,6 +51,57 @@ body {
         radial-gradient(circle at 85% 75%, #B8946E 0%, transparent 50%),
         linear-gradient(180deg, #F3D7C2 0%, #E8CCB7 100%);
     background-attachment: fixed;
+    position: relative;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    background-image: url('/bg-texture.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.22;
+    filter: blur(4px) saturate(1.05);
+    pointer-events: none;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at 50% 38%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.22) 22%, rgba(255, 255, 255, 0.0) 55%);
+    filter: blur(24px);
+    opacity: 0.85;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cursor-glow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 380px;
+    height: 380px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.38) 0%, rgba(255, 255, 255, 0.0) 60%);
+    border-radius: 9999px;
+    filter: blur(18px);
+    mix-blend-mode: soft-light;
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: 5;
+    transform: translate3d(-9999px, -9999px, 0);
+    margin-left: -190px;
+    margin-top: -190px;
+    transition: opacity 0.4s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cursor-glow {
+        display: none;
+    }
 }
 
 .app-container {
@@ -60,6 +111,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    position: relative;
+    z-index: 10;
 }
 
 /* Navigation */
